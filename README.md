@@ -8,7 +8,7 @@ Official code of the WACVW 2025 paper: DiffFake: Exposing Deepfakes using Differ
 
 ## 1) Downloading video datasets
 
-Download the datasets and place them in './Data/' according to data.md
+Download the datasets and place them in `./Data/` according to data.md
 
 ## 2) Extracting video frames, facial landmarks and bounding boxes
 
@@ -21,11 +21,11 @@ python extract_frames.py \
 ```
 
 To extract the facial landmarks and bounding boxes:
-1) Download the face detector haarcascade_frontalface_alt2.xml from [here](https://github.com/mitre/biqt-face/blob/master/config/haarcascades/haarcascade_frontalface_alt2.xml) and place it in './face_detectors'
+1) Download the face detector haarcascade_frontalface_alt2.xml from [here](https://github.com/mitre/biqt-face/blob/master/config/haarcascades/haarcascade_frontalface_alt2.xml) and place it in `./face_detectors`
 
-2) Download the landmark detector lbfmodel.yaml from [here](https://github.com/mitre/biqt-face/blob/master/config/haarcascades/haarcascade_frontalface_alt2.xml) and place it in "./face_detectors"
+2) Download the landmark detector lbfmodel.yaml from [here](https://github.com/kurnianggoro/GSOC2017/blob/master/data/lbfmodel.yaml) and place it in "./face_detectors"
 
-3) First do 'pip install opencv-contrib-python==4.11.0.86' ,then run the script (e.g.for FF++ original sequences):
+3) First do `pip install opencv-contrib-python==4.11.0.86` ,then run the script (e.g.for FF++ original sequences):
 
 ```bash
 python extract_bb_and_fl.py \
