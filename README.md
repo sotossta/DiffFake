@@ -60,6 +60,20 @@ python train_AD_module.py \
 --backbone efficientnet 
 ```
 
+# Running experiments
+
+To run experiments with DiffFake (e.g. test on FF) run the following script:
+
+```bash
+python testing_differential_AD.py \
+--data_dir_path Data \
+--model_dir {saved_backbone_path} \
+--dataset FF
+--feature_combination 2 \
+--ADM GMM \
+--backbone efficientnet 
+```
+
 
 
 
