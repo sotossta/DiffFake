@@ -1,1 +1,38 @@
-# DiffFake
+# DiffFake: Exposing Deepfakes using Differential Anomaly Detection
+
+![Overview](diff_AD_schematic.png)
+
+Official code of the WACVW 2025 paper: DiffFake: Exposing Deepfakes using Differential Anomaly Detection
+
+# Setup
+
+## 1) Downloading video datasets
+
+Download the datasets and place them in './Data/' according to data.md
+
+## 2) Extracting video frames, facial landmarks and bounding boxes
+
+To extract a specific number of frames from a given video dataset (e.g. FF++ original sequences) run the following:
+
+```bash
+python extract_frames.py \
+--data_dir_path Data \
+--dataset FF_original
+```
+
+To extract the facial landmarks and bounding boxes:
+1) Download the face detector haarcascade_frontalface_alt2.xml from [here](https://github.com/mitre/biqt-face/blob/master/config/haarcascades/haarcascade_frontalface_alt2.xml) and place it in './face_detectors'
+
+2) Download the landmark detector lbfmodel.yaml from [here](https://github.com/mitre/biqt-face/blob/master/config/haarcascades/haarcascade_frontalface_alt2.xml) and place it in "./face_detectors"
+
+3) First do 'pip install opencv-contrib-python==4.11.0.86' ,then run the script (e.g.for FF++ original sequences):
+
+```bash
+python extract_bb_and_fl.py \
+--data_dir_path Data \
+--dataset FF_original
+```
+
+
+
+
